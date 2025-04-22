@@ -1,66 +1,55 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+📌 Project Title
+Blood Bank Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+📝 Description
+A Laravel-based web application designed to manage blood donation and request processes. The system helps donors, patients, and administrators coordinate blood donations efficiently, view donation history, manage blood banks, and receive notifications for requests and updates.
 
-## About Laravel
+🎯 Features
+Donor and patient registration and login
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Blood donation requests and history tracking
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Blood bank management (add, edit, delete)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Notification system for requests status
 
-## Learning Laravel
+Admin panel to manage donors, patients, requests, and banks
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+🛠️ Tech Stack
+Backend: Laravel 11
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Frontend: HTML, CSS, Blade, FontAwesome
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Database: MySQL
 
-## Laravel Sponsors
+⚙️ Installation
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+git clone https://github.com/your-username/blood-bank-management.git
+cd blood-bank-management
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
 
-### Premium Partners
+📂 Environment Setup
+In your .env file, make sure to set up:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Database connection
 
-## Contributing
+Mailtrap or SMTP for email
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+🎯 Screenshots
 
-## Code of Conduct
+![لقطة الشاشة 2025-04-19 131712](https://github.com/user-attachments/assets/b6ee0d10-98d8-4547-b8ed-450e221b2650)
+![لقطة الشاشة 2025-04-22 151250](https://github.com/user-attachments/assets/bbc0e85f-9b89-4ad8-b56c-f07267653939)
+![لقطة الشاشة 2025-04-22 151225](https://github.com/user-attachments/assets/4fa40527-3ce3-41bb-9b15-e374ac24b2a6)
+![لقطة الشاشة 2025-04-22 151142](https://github.com/user-attachments/assets/1fd61138-b139-49ac-bfe5-538a2f9344b8)
+![لقطة الشاشة 2025-04-22 151022](https://github.com/user-attachments/assets/13ac72c1-b5d1-45d9-ad07-c224ff087b22)
+![لقطة الشاشة 2025-04-22 150830](https://github.com/user-attachments/assets/46edf773-550c-4072-9006-a058c50dbc69)
+![لقطة الشاشة 2025-04-22 150801](https://github.com/user-attachments/assets/e0122c03-668f-4f03-8a8e-8a17f3fbfcd7)
+![لقطة الشاشة 2025-04-22 150550](https://github.com/user-attachments/assets/210537da-ebe5-4398-8b2a-c387ce6bb752)
+![لقطة الشاشة 2025-04-22 150411](https://github.com/user-attachments/assets/fe398112-34c3-4d8e-9376-a8e9703db82e)
+![لقطة الشاشة 2025-04-22 150147](https://github.com/user-attachments/assets/bc6aa531-f97a-40d5-871f-548e5c486195)
+![screenshot](https://github.com/user-attachments/assets/38a11889-dbbd-4113-a8fd-3d810ceb7296)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
