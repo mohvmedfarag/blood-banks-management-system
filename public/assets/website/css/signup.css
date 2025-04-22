@@ -1,0 +1,82 @@
+/* -------- Global Settings -------- */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* General styling */
+main {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 300px;
+}
+
+.signup-container h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+input,
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.dob {
+    display: flex;
+    justify-content: space-between;
+}
+.dob select {
+    width: 32%;
+}
+button {
+    background-color: #8d1e1e;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    main {
+        width: 90%;
+    }
+
+    .dob {
+        flex-direction: column;
+    }
+
+    .dob select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
