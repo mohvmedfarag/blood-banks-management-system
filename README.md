@@ -2,9 +2,11 @@
 Blood Bank Management System
 
 📝 Description
+
 A Laravel-based web application designed to manage blood donation and request processes. The system helps donors, patients, and administrators coordinate blood donations efficiently, view donation history, manage blood banks, and receive notifications for requests and updates.
 
 🎯 Features
+
 Donor and patient registration and login
 
 Blood donation requests and history tracking
@@ -16,6 +18,7 @@ Notification system for requests status
 Admin panel to manage donors, patients, requests, and banks
 
 🛠️ Tech Stack
+
 Backend: Laravel 11
 
 Frontend: HTML, CSS, Blade, FontAwesome
@@ -25,14 +28,21 @@ Database: MySQL
 ⚙️ Installation
 
 git clone https://github.com/your-username/blood-bank-management.git
+
 cd blood-bank-management
+
 composer install
+
 cp .env.example .env
+
 php artisan key:generate
+
 php artisan migrate --seed
+
 php artisan serve
 
 📂 Environment Setup
+
 In your .env file, make sure to set up:
 
 Database connection
