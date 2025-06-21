@@ -6,7 +6,6 @@ body {
 
 .dashboard-container {
     flex: 3;
-    max-width: 900px;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;

@@ -6,65 +6,70 @@
     padding: 0;
     margin: 0;
 }
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-/* General styling */
-main {
+
+.signup-container {
+    width: 400px;
+    margin: 72px auto; /* قللنا المسافة من فوق وتحت */
+    padding: 20px; /* قللنا البادينج */
     background-color: #fff;
-    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    margin-top: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 .signup-container h2 {
     color: #333;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
-form {
+
+.signup-container form {
     display: flex;
     flex-direction: column;
+    gap: 8px; /* بدل 15px خليه 8px */
 }
-label {
-    margin-bottom: 5px;
+
+.signup-container label {
+    text-align: left;
     font-weight: bold;
-    color: #555;
+    color: #333;
+    font-size: 14px; /* صغرنا حجم الخط */
 }
-input,
-select {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="tel"],
+.signup-container input[type="number"],
+.signup-container input[type="password"] {
+    padding: 8px;
     border-radius: 5px;
-    font-size: 16px;
+    border: 1px solid #ccc;
+    font-size: 14px;
 }
-.dob {
-    display: flex;
-    justify-content: space-between;
-}
-.dob select {
-    width: 32%;
-}
-button {
+
+.signup-container .button {
+    padding: 8px 16px;
     background-color: #8d1e1e;
     color: white;
     border: none;
-    padding: 10px;
-    font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 15px;
 }
-button:hover {
-    background-color: #218838;
+
+.signup-container .button:hover {
+    background-color: #600b0b;
 }
+
+.text-danger {
+    color: red;
+    font-size: 11px;
+    text-align: left;
+}
+
+
 /* Responsive Design */
 @media (max-width: 600px) {
     main {

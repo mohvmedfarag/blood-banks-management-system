@@ -26,8 +26,8 @@
             @forelse ($bloodbanks as $bank)
                 <tr>
                     <td>{{ $bank->id }}</td>
-                    <td>{{ rtrim($bank->name, "blood bank") }}</td>
-                    <td>{{ $bank->address }}</td>
+                    <td>{{ $bank->name }}</td>
+                    <td>{{ $bank->governorate . ' , ' . $bank->city }}</td>
                     <td>{{ $bank->phone }}</td>
                     <td>{{ $bank->email }}</td>
                     <td><a href="{{route('admin.dashboard.bloodbanks.showFormEditBank', $bank->id)}}" class="action-link edit"><i class="fa-solid fa-pencil"></i></a></td>

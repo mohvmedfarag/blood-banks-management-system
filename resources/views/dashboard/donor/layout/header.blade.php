@@ -41,10 +41,15 @@
         <nav id="nav">
             <ul>
                 <li><a href="{{ route('welcome') }}">{{ __('words.home') }}</a></li>
-                <li><a href="{{route('welcome.bloodBanks')}}"> Blood Banks </a></li>
-                <li><a href="#Campaigns">{{ __('words.campaigns') }}</a></li>
-                <li><a href="#about-us">{{ __('words.about') }}</a></li>
-                <li><a href="#contact us">{{ __('words.contact') }}</a></li>
+                <li><a href="{{ route('welcome.bloodBanks') }}"> {{__('words.bloodBanks')}} </a></li>
+                <li>
+                    <a href="{{ request()->routeIs('welcome') ? '#Campaigns' : route('welcome') . '#Campaigns' }}">
+                        {{ __('words.campaigns') }}
+                    </a>
+                </li>
+                <li><a href="{{ request()->routeIs('welcome') ? '#about-us' : route('welcome') . '#about-us' }}">{{ __('words.about') }}</a></li>
+                <li><a href="{{ request()->routeIs('welcome') ? '#contact-us' : route('welcome') . '#contact-us' }}">{{ __('words.contact') }}</a></li>
+
 
                 @if (LaravelLocalization::getCurrentLocale() == 'en')
                     <li><a href="{{ LaravelLocalization::getLocalizedURL('ar') }}">العربية</a></li>
@@ -52,6 +57,7 @@
                     <li><a href="{{ LaravelLocalization::getLocalizedURL('en') }}">English</a></li>
                 @endif
 
+                <li style="display: none"><a href="{{ route('chatbot.chat') }}"> Help </a></li>
 
                 @if (Auth::guard('donor')->check())
                     <li><a href="{{ route('donor.dashboard') }}">{{ __('words.dashboard') }}</a></li>

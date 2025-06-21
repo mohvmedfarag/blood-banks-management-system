@@ -21,10 +21,9 @@
                     </li>
                     @elseif (Auth::guard('admin')->check())
                     <li>
-                        <form method="post" action="{{ route('admin.logout') }}">
-                            @csrf
-                            <button type="submit" class="auth-button signup">logout</button>
-                        </form>
+                        <a href="javascript:void(0)" onclick="document.getElementById('adminLogout').submit()"
+                                class="auth-button login">Logout</a>
+                            <form id="adminLogout" method="post" action="{{ route('admin.logout') }}">@csrf</form>
 
                     </li>
             
@@ -61,6 +60,11 @@
                     <li><a href="{{ LaravelLocalization::getLocalizedURL('ar') }}">العربية</a></li>
                 @else
                     <li><a href="{{ LaravelLocalization::getLocalizedURL('en') }}">English</a></li>
+                @endif
+
+
+                @if (auth()->guard('donor')->check() || auth()->guard('patient')->check())
+                <li><a href="{{ route('chatbot.chat') }}"> Help </a></li>
                 @endif
 
 

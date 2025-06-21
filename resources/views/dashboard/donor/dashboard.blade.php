@@ -3,7 +3,7 @@
   Donor - Profile
 @endsection
 @section('content')
-<div class="profile-container-two">
+<div class="dashboard-container">
     <!-- Profile Header -->
     <div class="profile-header">
       <img src="{{asset("storage/$donor->image")}}" alt="">

@@ -34,7 +34,7 @@
                 </select>
     
                 <label for="donation_date">Donation Date:</label>
-                <input type="text" id="donation_date" name="donation_date" min="1">
+                <input type="date" id="donation_date" name="donation_date" min="1">
                 
                 <label for="bloodbank">Blood Bank:</label>
                 <select id="bloodbank" name="bloodbank_id">

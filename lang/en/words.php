@@ -42,4 +42,5 @@ return[
     'campaign2' => 'Join us in building a robust network of blood donors, ensuring timely distribution to hospitals and emergency services.',
     'campaign3' => 'Together, we can make a difference by uniting communities and saving lives through targeted outreach and donation initiatives.',
     'bloodBanks' => 'Blood Banks',
+    'sorry' => "Sorry, I couldn't understand your question. Please try asking something else.",
 ];

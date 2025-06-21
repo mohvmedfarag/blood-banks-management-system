@@ -1,6 +1,5 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\SendNotifyController;
@@ -17,7 +16,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function(){
 		Route::post('logout', [AdminAuthController::class, 'logout'])->name('logout');
 
 		######################### Dashboard Routes ###########################
-		
+
 		Route::controller(ProfileController::class)->group( function(){
 
 			Route::get('dashboard', 'index')->name('dashboard');
@@ -50,6 +49,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function(){
 			Route::get('add/admin', 'addAdminForm')->name('add.admin.show');
 			Route::post('add/admin', 'addAdmin')->name('add.admin.post');
 			Route::delete('delete/admin/{id}', 'deleteAdmin')->name('delete.admin');
+
+			Route::get('contacts', 'contacts')->name('contacts');
+			Route::post('contacts/{id}', 'deleteContact')->name('deleteContact');
 		});
 
 		Route::controller(SendNotifyController::class)->group(function(){
@@ -57,6 +59,5 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function(){
 			Route::post('notifications/send', 'sendNotification')->name('notifications.send.post');
 		});
 	});
-	
+
 });
-	

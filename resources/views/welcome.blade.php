@@ -75,7 +75,7 @@
         </div>
         <div class="campaign-container">
           <div class="campaign-card">
-            <img src="{{asset('assets/website/photo/lo(4).png')}}" alt="Campaign image" />
+            <img src="{{asset('assets/website/photo/23.png')}}" style="padding: 20px 15px 0px 15px;" alt="Campaign image" />
             <div class="campaign-info">
               <p class="description">
                 {{__('words.campaign1')}}
@@ -83,7 +83,7 @@
             </div>
           </div>
           <div class="campaign-card">
-            <img src="{{asset('assets/website/photo/lo(4).png')}}" alt="Campaign image" />
+            <img src="{{asset('assets/website/photo/22.jpg')}}" style="padding: 20px 15px 0px 15px;" alt="Campaign image" />
             <div class="campaign-info">
               <p class="description">
                 {{__('words.campaign2')}}
@@ -91,7 +91,7 @@
             </div>
           </div>
           <div class="campaign-card">
-            <img src="{{asset('assets/website/photo/lo(4).png')}}" alt="Campaign image" />
+            <img src="{{asset('assets/website/photo/24.jpg')}}" style="padding: 20px 15px 0px 15px;" alt="Campaign image" />
             <div class="campaign-info">
               <p class="description">
                 {{__('words.campaign3')}}

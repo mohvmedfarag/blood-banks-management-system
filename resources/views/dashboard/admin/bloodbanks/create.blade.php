@@ -104,6 +104,9 @@
                         <input type="checkbox" name="blood_samples[]" value="{{ $type }}"> {{ $type }}
                     @endforeach
                 </div>
+                @error('blood_samples[]')
+                    {{ $message }}
+                @enderror
                 <br />
 
                 <div class="form-group">

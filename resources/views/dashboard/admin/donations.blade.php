@@ -6,7 +6,7 @@
 <div class="dashboard-container" >
     <h1>Donation History</h1>
     <div class="summary">
-        Total Donations: <strong>25</strong> | Last Donation: <strong>2024-10-15</strong>
+        Total Donations: <strong>{{$donations->count()}}</strong> | Last Donation: <strong>2024-10-15</strong>
     </div>
 
     <table>
@@ -36,15 +36,15 @@
                     <td>{{ rtrim($donate->bloodbank->name, "blood bank") }}</td>
                     <td>{{ $donate->status }}</td>
                     <td>
-                        <a href="javascript:void(0)" onclick="document.getElementById('acceptDonation').submit()" class="action-link edit">Accept</a>
-                        <form id="acceptDonation" method="POST" action="{{route('admin.dashboard.donations.accept', $donate->id)}}">
+                        <a href="javascript:void(0)" onclick="document.getElementById('acceptDonation{{$donate->id}}').submit()" class="action-link edit">Accept</a>
+                        <form id="acceptDonation{{$donate->id}}" method="POST" action="{{route('admin.dashboard.donations.accept', $donate->id)}}">
                             @csrf
                         </form>
                     </td>
 
                     <td>
-                        <a href="javascript:void(0)" onclick="document.getElementById('deleteDonate').submit()" class="action-link delete">Reject</a>
-                        <form id="deleteDonate" method="post" action="{{route('admin.dashboard.donations.reject', $donate->id)}}">@csrf</form>
+                        <a href="javascript:void(0)" onclick="document.getElementById('deleteDonate{{$donate->id}}').submit()" class="action-link delete">Reject</a>
+                        <form id="deleteDonate{{$donate->id}}" method="post" action="{{route('admin.dashboard.donations.reject', $donate->id)}}">@csrf</form>
                     </td>
                 </tr>
             @empty

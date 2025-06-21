@@ -4,7 +4,7 @@
 @endsection
 @section('content')
 <main class="continer">
-    <section class="signup-container">
+    <section class="signup-container" style="margin: 35px auto">
         <h2>Register</h2>
         <form id="signupForm" method="post" action="{{route('donor.register')}}">
             @csrf

@@ -20,7 +20,6 @@
 </style>
 <body>
 @include('dashboard.patient.layout.header')
-<main class="profile-container">
     <div class="continer">
         @if(Auth::guard('patient')->check())
         <aside class="sidebar">
@@ -59,7 +58,7 @@
 
     @yield('content')
     </div>
-</main>
+
 @include('dashboard.patient.layout.footer')
 <script src="{{asset('assets/donor/')}}js/pro.js"></script>
 </body>

@@ -6,7 +6,7 @@
 <div class="dashboard-container" >
     <h1>Donation History</h1>
     <div class="summary">
-        Total Donations: <strong>25</strong> | Last Donation: <strong>2024-10-15</strong>
+        Total Donations: <strong>{{$donors->count()}}</strong> | Last Donation: <strong>2024-10-15</strong>
     </div>
 
     <table>
@@ -35,7 +35,7 @@
                     <td>{{ $donor->weight }} kg</td>
                     <td>none</td>
                     <td>
-                        <a href="javascript:void(0)" onclick="document.getElementById('deleteDonate').submit()" class="action-link delete">Block</a>
+                        <a href="javascript:void(0)" onclick="document.getElementById('deleteDonate').submit()" class="action-link delete">Delete</a>
                         <form id="deleteDonate" method="post" action="{{route('admin.dashboard.donors.block', $donor->id)}}">@csrf</form>
                     </td>
                 </tr>

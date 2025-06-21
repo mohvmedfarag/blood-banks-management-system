@@ -3,12 +3,14 @@
   Patient - Profile
 @endsection
 @section('content')
-<div class="profile-container-two">
+<div class="dashboard-container">
     <!-- Profile Header -->
     <div class="profile-header">
       <img src="{{asset("storage/$patient->image")}}" alt="">
-      <h1>{{ $patient->name }}</h1>
+      <div>
+        <h1>{{ $patient->name }}</h1>
       <p>Patient</p>
+      </div>
     </div>
 
     <div>

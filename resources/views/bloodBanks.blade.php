@@ -101,14 +101,10 @@ body {
 @section('content')
 <div class="blood-banks-container">
     <h1>Blood Banks</h1>
-  
     <form action="{{ route('welcome.bloodBanks.search') }}" method="GET" class="search-form">
       <input type="text" name="key" value="{{ old('key') }}" placeholder="Search for blood bank or your blood sample...">
       <button type="submit">Search</button>
     </form>
-
-   
-  
     <table class="banks-table">
       <thead>
         <tr>
@@ -122,9 +118,10 @@ body {
       <tbody>
         @forelse ($banks as $bank)
           <tr>
-            {{-- <td> <a href="https://www.google.com/maps/place/30%C2%B012'50.5%22N+31%C2%B026'36.5%22E/@30.2140347,31.4456654,17z/data=!3m1!4b1!4m4!3m3!8m2!3d30.2140347!4d31.4434767?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNjM5SAFQAw%3D%3D"> {{ $bank->name }} <i class="fa-solid fa-location-dot"></i> </a> </td> --}}
             <td>{{ $bank->name }}</td>
-            <td>{{ $bank->governorate }} - {{ $bank->city }} - {{ $bank->street }} <a href="{{ $bank->location }}"><i class="fa-solid fa-location-dot fa-lg" style="color: #8d1e1e; cursor: pointer;"></i></a></td>
+            <td>{{ $bank->governorate }} - {{ $bank->city }} - {{ $bank->street }} 
+              <a href="{{ $bank->location }}"><i class="fa-solid fa-location-dot fa-lg" 
+                style="color: #8d1e1e; cursor: pointer;"></i></a></td>
             <td>{{ $bank->phone }}</td>
             <td>{{ $bank->email }}</td>
             <td>{{ $bank->blood_samples->pluck('blood-sample')->implode(' | ') }}</td>

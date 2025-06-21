@@ -18,14 +18,15 @@
 
 
     <script src="{{ asset('assets/website/js/home.js') }}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8ajS_b19xd9iUsx7ABgpvKjK1ipg0lzM&callback=initMap" async defer></script>
+    {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8ajS_b19xd9iUsx7ABgpvKjK1ipg0lzM&callback=initMap" async defer></script> --}}
 </body>
 <script>
     const background = document.getElementById('background');
     const images = [
         'url("{{ asset('assets/website/photo/pto1.png') }}")',
         'url("{{ asset('assets/website/photo/pto2.png') }}")',
-        'url("{{ asset('assets/website/photo/pto3.png') }}")'
+        'url("{{ asset('assets/website/photo/pto3.png') }}")',
+        'url("{{ asset('assets/website/photo/pto5.jpg') }}")'
         ];
     let currentIndex = 0;
 

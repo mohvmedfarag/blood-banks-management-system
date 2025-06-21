@@ -6,7 +6,7 @@
 <div class="dashboard-container" >
     <h1>Donation History</h1>
     <div class="summary">
-        Total Donations: <strong>25</strong> | Last Donation: <strong>2024-10-15</strong>
+        Total Donations: <strong>{{$requests->count()}}</strong> | Last Donation: <strong>2024-10-15</strong>
     </div>
 
     <table>
@@ -20,6 +20,7 @@
                 <th>Quantity</th>
                 <th>Blood Bank</th>
                 <th>Status</th>
+                <th></th>
                 <th>Action</th>
                 <th></th>
             </tr>

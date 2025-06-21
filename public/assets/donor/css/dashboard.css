@@ -3,13 +3,13 @@ body {
     background-color: #f4f4f9;
     margin: 0;
   }
-   .profile-container-two {
-    margin: 0 auto;
-    background: #fff;
-    padding: 30px;
+  .dashboard-container {
+    flex: 3;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 10px;
-    width: 78%
-  }
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
   
   .profile-header {
     text-align: center;

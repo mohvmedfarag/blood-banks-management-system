@@ -4,9 +4,9 @@ body {
     background-color: #f4f4f9;
 }
 
+
 .dashboard-container {
-    max-width: 900px;
-    margin: 0 auto;
+    flex: 3;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;

@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
+use App\Models\Contact;
 use App\Models\Request as ModelsRequest;
 use App\Notifications\BloodRequestStatusNotification;
 use App\Notifications\DonateBloodStatusNotification;
@@ -19,7 +20,12 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        return view('dashboard.admin.dashboard');
+        $bloodbanks = Bloodbank::all();
+        $donors = Donor::all();
+        $patients = Patient::all();
+        $requests = ModelsRequest::all();
+        $donations = Donation::all();
+        return view('dashboard.admin.dashboard', compact('bloodbanks', 'donors', 'patients', 'requests', 'donations'));
     }
 
     public function bloodbanks()
@@ -36,10 +42,10 @@ class ProfileController extends Controller
     public function storeBank(Request $request)
     {
         $data = $request->validate([
-            'name' => 'required|string|max:255',
-            'governorate' => 'required|string|max:255',
-            'city' => 'required|string|max:255',
-            'street' => 'required|string|max:255',
+            'name' => 'required|string|max:100',
+            'governorate' => 'required|string|max:20',
+            'city' => 'required|string|max:255|regex:/^[A-Za-z\s]+$/',
+            'street' => 'required|string|max:100',
             'location' => 'nullable|string',
             'email' => 'required|email|max:255|unique:bloodbanks,email',
             'phone' => 'required|string|max:20|unique:bloodbanks,phone',
@@ -213,7 +219,7 @@ class ProfileController extends Controller
         $admins = Admin::where('id', '!=', 1)->get();
         return view('dashboard.admin.manage-admins.admins', compact('admins'));
     }
-    
+
     public function addAdminForm(){
         return view('dashboard.admin.manage-admins.addAdmin');
     }
@@ -237,5 +243,15 @@ class ProfileController extends Controller
     public function deleteAdmin($id){
         Admin::where('id', $id)->delete();
         return redirect()->back()->with('info', 'Admin Deleted Successfully');
+    }
+
+    public function contacts(){
+        $contacts = Contact::all();
+        return view('dashboard.admin.contacts', compact('contacts'));
+    }
+
+    public function deleteContact($id){
+        Contact::where('id', $id)->delete();
+        return redirect()->back()->with('success', 'contact deleted successfully');
     }
 }

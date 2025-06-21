@@ -48,7 +48,7 @@ class DonorAuthController extends Controller
     public function showLoginForm()
     {
         if (! session()->has('visited_login_type')) {
-            return redirect()->route('chooseLogin')->with('error', 'Please select the logging type first');
+            return redirect()->route('chooseLogin')->with('info', 'select the logging type to login');
         }
         return view('auth.donor.login');
     }
