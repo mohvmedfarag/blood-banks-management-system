@@ -11,14 +11,13 @@
 
     @yield('content')
 
-    
+
 
     <!-- Footer Section -->
     @include('layouts.website.footer')
 
 
     <script src="{{ asset('assets/website/js/home.js') }}"></script>
-    {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8ajS_b19xd9iUsx7ABgpvKjK1ipg0lzM&callback=initMap" async defer></script> --}}
 </body>
 <script>
     const background = document.getElementById('background');
@@ -38,9 +37,9 @@
     setInterval(changeBackground, 3000);
 
 
-    
 
-    
+
+
 </script>
 
 </html>
